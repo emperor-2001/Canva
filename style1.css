@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  background-image: url("4.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+} */
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fac7fac5;
+}
+#canvas {
+  /* box-sizing : border-box; */
+  /* border box do not works for canvas border always goes outside the box */
+  /* border: 0px solid ; */
+  border-top : 20px solid rgb(148, 1, 148);
+  border-left : 20px solid rgb(148, 1, 148);
+  border-right : 20px solid rgb(148, 1, 148);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: white;
+}
+.cont
+{
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box1
+{
+  position : relative;
+   margin-top : -400px;
+   top : 540px;
+   right : 680px;
+   height : 200px;
+   width : 305px;
+   /* background-color: black; */
+   background: url("./canv.png") no-repeat center center;
+   animation : animate1  2s infinite alternate-reverse ease-in-out;
+  }
+  
+  .box2
+  {
+    position : relative;
+    top : 350px;
+    left : 680px;
+    height : 200px;
+    width : 305px;
+    /* background-color: black; */
+    background: url("./canv.png") no-repeat center center;
+    animation : animate2  2s infinite alternate-reverse ease-in-out;
+}
+@keyframes animate2
+{
+    from{
+        top : 350px;
+        /* height : 200px; */
+    }
+    to{
+        
+        /* width : 400px; */
+        /* height : 220px; */
+        /* background: red; */
+        top : 400px;
+         
+    }
+}
+@keyframes animate1
+{
+    from{
+        top : 540px;
+        /* height : 200px; */
+    }
+    to{
+        
+        /* width : 400px; */
+        /* height : 220px; */
+        /* background: red; */
+        top : 600px;
+         
+    }
+}
+.toolbox {
+  background: rgb(148, 1, 148);
+  width: 840px;
+  display: flex;
+  padding: 0.35rem 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* justify-content: center;
+    align-items: center; */
+}
+
+.toolbox > * {
+  height: 50px;
+  width: 50px;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.toolbox span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toolbox > *:last-child {
+  margin-left: auto;
+}
+.rim
+{
+  background-color: rgb(148, 1, 148);
+  height : 8vh;
+  width : 40px;
+
+}
+.base
+{
+  background-color: rgb(148, 1, 148);
+  width: 600px;
+  height : 39px;
+  border-radius : 20px;
+}
